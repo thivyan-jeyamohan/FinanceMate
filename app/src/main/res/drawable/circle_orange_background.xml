@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid green color -->
+    <solid android:color="#f3aa61" /> <!-- This is the green color -->
+
+    <!-- Rounded corners with a radius large enough to form a circle -->
+    <corners android:radius="25dp" /> <!-- This radius should match half the width/height of the ImageView to create a circle -->
+</shape>
