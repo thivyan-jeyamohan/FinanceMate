@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FinanceMate</string>
+    <string-array name="category_array">
+        <item>Education</item>
+        <item>Home</item>
+        <item>Food and Drink</item>
+    </string-array>
 </resources>
