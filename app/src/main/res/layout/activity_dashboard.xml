@@ -17,14 +17,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="105dp"
         android:fontFamily="@font/roboto_black"
         android:text="₹2,40,081"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,19 +41,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monthly_cash_flow" />
 
+
+    <!-- HorizontalScrollView for the Spend Analysis Cards -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="346dp"
         android:layout_height="111dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monthly_label">
 
@@ -111,22 +113,19 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-
-    <!-- HorizontalScrollView for the Spend Analysis Cards -->
     <androidx.cardview.widget.CardView
         android:id="@id/card_view"
         android:layout_width="346dp"
         android:layout_height="111dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toTopOf="@+id/cardView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
@@ -168,7 +167,7 @@
                         android:textSize="10sp" />
 
                     <TextView
-                        android:id="@id/income_value"
+                        android:id="@+id/expense_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
@@ -250,13 +249,13 @@
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/food" />
+                            android:src="@drawable/house" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="Food and Drink"
+                            android:text="Housing"
                             android:textColor="#000000"
                             android:textSize="12sp" />
 
@@ -296,7 +295,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="Food and Drink"
+                            android:text="Food"
                             android:textColor="#000000"
                             android:textSize="12sp" />
 
@@ -330,13 +329,13 @@
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/food" />
+                            android:src="@drawable/cardiogram" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="Food and Drink"
+                            android:text="Health"
                             android:textColor="#000000"
                             android:textSize="12sp" />
 
@@ -370,13 +369,132 @@
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/food" />
+                            android:src="@drawable/graduation" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="Food and Drink"
+                            android:text="Education"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="139dp"
+                    android:layout_height="120dp"
+
+                    android:background="#FFEB3B"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"> <!-- Yellow background color -->
+
+                    <LinearLayout
+                        android:layout_width="117dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <!-- Icon for Food & Drinks -->
+                        <!-- Replace with actual food icon -->
+
+                        <!-- Percentage for Food & Drinks -->
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/car" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Transportation"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="139dp"
+                    android:layout_height="120dp"
+
+                    android:background="#FFEB3B"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"> <!-- Yellow background color -->
+
+                    <LinearLayout
+                        android:layout_width="117dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <!-- Icon for Food & Drinks -->
+                        <!-- Replace with actual food icon -->
+
+                        <!-- Percentage for Food & Drinks -->
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/cinema" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Entertainment"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="139dp"
+                    android:layout_height="120dp"
+
+                    android:background="#FFEB3B"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"> <!-- Yellow background color -->
+
+                    <LinearLayout
+                        android:layout_width="117dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <!-- Icon for Food & Drinks -->
+                        <!-- Replace with actual food icon -->
+
+                        <!-- Percentage for Food & Drinks -->
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/menu" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Other"
                             android:textColor="#000000"
                             android:textSize="12sp" />
 
