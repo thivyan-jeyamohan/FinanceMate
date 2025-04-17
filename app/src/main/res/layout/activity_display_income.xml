@@ -8,13 +8,16 @@
 
     <!-- ScrollView to enable scrolling when there is more data -->
 
+    <!-- Navigation button to add new income -->
+
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="416dp"
-        android:layout_height="652dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="479dp"
+        android:layout_height="926dp"
+        android:layout_marginTop="48dp"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -29,12 +32,11 @@
 
     </ScrollView>
 
-    <!-- Navigation button to add new income -->
     <LinearLayout
-        android:layout_width="356dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="-320dp"
+        android:layout_width="463dp"
+        android:layout_height="108dp"
         android:layout_marginEnd="50dp"
+        android:layout_marginBottom="400dp"
         android:background="@drawable/rounded_backgroundblue"
         android:gravity="center"
         android:orientation="horizontal"
@@ -42,9 +44,9 @@
         android:paddingRight="20dp"
         android:translationX="25dp"
         android:translationY="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <ImageView

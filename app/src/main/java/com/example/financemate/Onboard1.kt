@@ -1,8 +1,10 @@
 package com.example.financemate
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -15,6 +17,12 @@ class Onboard1 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val next: CardView = findViewById(R.id.getstart)
+        next.setOnClickListener {
+            val intent = Intent(this, Onboard2::class.java)
+            startActivity(intent)
         }
     }
 }

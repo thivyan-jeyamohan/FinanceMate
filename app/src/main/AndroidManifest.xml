@@ -37,7 +37,7 @@
             android:name=".Incomeform"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".Onboard1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,7 +52,7 @@
             android:name=".Onboard2"
             android:exported="false" />
         <activity
-            android:name=".Onboard1"
+            android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

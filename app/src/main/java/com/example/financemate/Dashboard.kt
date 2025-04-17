@@ -69,6 +69,12 @@ class Dashboard : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val imageViewin: ImageView = findViewById(R.id.imageView13)
+        imageViewin.setOnClickListener {
+            val intent = Intent(this, Incomeform::class.java)
+            startActivity(intent)
+        }
+
         // Calculate and display total expense
         val totalExpense = calculateTotalExpense()
         val expenseTextView: TextView = findViewById(R.id.expense_value)
