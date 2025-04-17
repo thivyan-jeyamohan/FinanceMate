@@ -47,7 +47,7 @@
             app:layout_constraintTop_toBottomOf="@+id/monthly_cash_flow" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_view"
+            android:id="@+id/card_viewin"
             android:layout_width="445dp"
             android:layout_height="144dp"
             android:layout_marginStart="48dp"

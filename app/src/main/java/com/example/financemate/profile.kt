@@ -1,12 +1,14 @@
 package com.example.financemate
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -21,9 +23,34 @@ class profile : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("UserProfile", Context.MODE_PRIVATE)
 
+
+        val home: ImageView = findViewById(R.id.imageView8)
+        home.setOnClickListener {
+            val intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+        }
+
+        val budget: ImageView = findViewById(R.id.imageView9)
+        budget.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+
+        val trans: ImageView = findViewById(R.id.imageView10)
+        trans.setOnClickListener {
+            val intent = Intent(this, transication::class.java)
+            startActivity(intent)
+        }
+
+        val profileu: ImageView = findViewById(R.id.imageView11)
+        profileu.setOnClickListener {
+            val intent = Intent(this, profile::class.java)
+            startActivity(intent)
+        }
+
         // Initialize the input fields
-        val nameEditText: EditText = findViewById(R.id.editTextName)
-        val ageEditText: EditText = findViewById(R.id.editTextAge)
+        val nameEditText: EditText = findViewById(R.id.editTextName3)
+        val ageEditText: EditText = findViewById(R.id.editTextAge2)
         val emailEditText: EditText = findViewById(R.id.editTextEmail)
         val currencySpinner: Spinner = findViewById(R.id.spinnerCurrency)
         val budgetMonthSpinner: Spinner = findViewById(R.id.spinnerBudgetMonth)

@@ -50,9 +50,9 @@ class expense_overview : AppCompatActivity() {
             // Get references to the TextViews for displaying the totals
             val housingTextView: TextView = findViewById(R.id.textViewhouse)
             val foodTextView: TextView = findViewById(R.id.textViewfood)
-            val entertainmentTextView: TextView = findViewById(R.id.textViewentetainment)
+            val entertainmentTextView: TextView = findViewById(R.id.textViewentertain)
             val healthTextView: TextView = findViewById(R.id.textViewhealth)
-            val educationTextView: TextView = findViewById(R.id.textVieweducation) // Add Education TextView
+            val educationTextView: TextView = findViewById(R.id.textViewedu) // Add Education TextView
 
             // Calculate totals for each category
             val housingTotal = calculateTotalForCategory("Housing")
