@@ -27,6 +27,34 @@ class Dashboard : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
 
+
+        val home: ImageView = findViewById(R.id.imageView8)
+        home.setOnClickListener {
+            val intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+        }
+
+        val budget: ImageView = findViewById(R.id.imageView9)
+        budget.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+
+        val trans: ImageView = findViewById(R.id.imageView10)
+        trans.setOnClickListener {
+            val intent = Intent(this, transication::class.java)
+            startActivity(intent)
+        }
+
+        val profileu: ImageView = findViewById(R.id.imageView11)
+        profileu.setOnClickListener {
+            val intent = Intent(this, profile::class.java)
+            startActivity(intent)
+        }
+
+
+
+
         // Adjust window insets for edge-to-edge layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

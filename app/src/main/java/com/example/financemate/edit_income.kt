@@ -19,6 +19,30 @@ class edit_income : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_income)
 
+        val home: ImageView = findViewById(R.id.imageView8)
+        home.setOnClickListener {
+            val intent = Intent(this, Dashboard::class.java)
+            startActivity(intent)
+        }
+
+        val budget: ImageView = findViewById(R.id.imageView9)
+        budget.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+
+        val trans: ImageView = findViewById(R.id.imageView10)
+        trans.setOnClickListener {
+            val intent = Intent(this, transication::class.java)
+            startActivity(intent)
+        }
+
+        val profileu: ImageView = findViewById(R.id.imageView11)
+        profileu.setOnClickListener {
+            val intent = Intent(this, profile::class.java)
+            startActivity(intent)
+        }
+
         val titleEditText: EditText = findViewById(R.id.titleEditText)
         val amountEditText: EditText = findViewById(R.id.amountEditText)
         val dateEditText: EditText = findViewById(R.id.dateEditText)

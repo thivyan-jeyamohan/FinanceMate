@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanceMate">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".transication"
+            android:exported="false" />
+        <activity
             android:name=".expense_overview"
             android:exported="false" />
         <activity

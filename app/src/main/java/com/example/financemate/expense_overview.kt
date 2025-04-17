@@ -1,6 +1,8 @@
 package com.example.financemate
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -21,9 +23,32 @@ class expense_overview : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_expense_overview)
 
+            val home: ImageView = findViewById(R.id.imageView8)
+            home.setOnClickListener {
+                val intent = Intent(this, Dashboard::class.java)
+                startActivity(intent)
+            }
+
+            val budget: ImageView = findViewById(R.id.imageView9)
+            budget.setOnClickListener {
+                val intent = Intent(this, expense_overview::class.java)
+                startActivity(intent)
+            }
+
+            val trans: ImageView = findViewById(R.id.imageView10)
+            trans.setOnClickListener {
+                val intent = Intent(this, transication::class.java)
+                startActivity(intent)
+            }
+
+            val profileu: ImageView = findViewById(R.id.imageView11)
+            profileu.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+
             // Get references to the TextViews for displaying the totals
             val housingTextView: TextView = findViewById(R.id.textViewhouse)
-            val transportationTextView: TextView = findViewById(R.id.textViewtransport)
             val foodTextView: TextView = findViewById(R.id.textViewfood)
             val entertainmentTextView: TextView = findViewById(R.id.textViewentetainment)
             val healthTextView: TextView = findViewById(R.id.textViewhealth)
@@ -31,7 +56,6 @@ class expense_overview : AppCompatActivity() {
 
             // Calculate totals for each category
             val housingTotal = calculateTotalForCategory("Housing")
-            val transportationTotal = calculateTotalForCategory("Transportation")
             val foodTotal = calculateTotalForCategory("Food")
             val entertainmentTotal = calculateTotalForCategory("Entertainment")
             val healthTotal = calculateTotalForCategory("Health")
@@ -39,7 +63,6 @@ class expense_overview : AppCompatActivity() {
 
             // Update the TextViews with the totals
             housingTextView.text = formatCurrency(housingTotal)
-            transportationTextView.text = formatCurrency(transportationTotal)
             foodTextView.text = formatCurrency(foodTotal)
             entertainmentTextView.text = formatCurrency(entertainmentTotal)
             healthTextView.text = formatCurrency(healthTotal)

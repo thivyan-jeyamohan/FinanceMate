@@ -7,6 +7,7 @@
     android:padding="16dp">
 
     <!-- Expense Name Image Icon -->
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="361dp"
@@ -123,31 +124,92 @@
     <!-- Save Button -->
 
     <!-- Expense Icon -->
+
     <ImageView
         android:id="@+id/saveButton"
-        android:layout_width="282dp"
-        android:layout_height="96dp"
+        android:layout_width="190dp"
+        android:layout_height="84dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="65dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:srcCompat="@drawable/saveexpense" />
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="115dp"
-        android:layout_height="83dp"
+        android:layout_width="92dp"
+        android:layout_height="51dp"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="116dp"
         android:contentDescription="Expense Icon"
         android:src="@drawable/moneyex"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="-330dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/rounded_backgroundblue"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:translationX="25dp"
+        android:translationY="350dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton">
+
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            android:layout_weight="1"
+
+            app:srcCompat="@drawable/home" />
+
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            android:layout_weight="1"
+
+            app:srcCompat="@drawable/moneybag" />
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            android:layout_weight="1"
+
+            app:srcCompat="@drawable/file" />
+
+        <!-- User Icon -->
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+
+            app:srcCompat="@drawable/user" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
