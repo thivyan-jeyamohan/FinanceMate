@@ -10,10 +10,33 @@
 
     <!-- Navigation button to add new expense -->
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="85dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:srcCompat="@drawable/refresh" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="163dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:srcCompat="@drawable/restore" />
+
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="482dp"
-        android:layout_height="959dp"
+        android:layout_width="338dp"
+        android:layout_height="610dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="29dp"
@@ -32,10 +55,10 @@
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="463dp"
-        android:layout_height="108dp"
+        android:layout_width="345dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginBottom="410dp"
         android:background="@drawable/rounded_backgroundblue"
         android:gravity="center"
         android:orientation="horizontal"
@@ -50,8 +73,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -61,8 +84,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -72,8 +95,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -83,8 +106,8 @@
         <!-- User Icon -->
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
 

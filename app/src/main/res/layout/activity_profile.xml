@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@+id/imageView33"
-        android:layout_width="298dp"
-        android:layout_height="79dp"
+        android:layout_width="241dp"
+        android:layout_height="48dp"
         android:layout_marginStart="121dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="121dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="549dp"
-        android:layout_height="269dp"
+        android:layout_width="396dp"
+        android:layout_height="198dp"
         android:background="@drawable/bg_blue_gradient"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,22 +34,22 @@
             android:id="@+id/textViewName3"
             android:layout_width="77dp"
             android:layout_height="33dp"
-            android:layout_marginTop="90dp"
-            android:layout_marginEnd="237dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="92dp"
             android:text="Name"
             android:textColor="#FBFBFB"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/editTextName3"
-            android:layout_width="281dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="82dp"
+            android:layout_width="217dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="56dp"
             android:background="@drawable/inputbg"
             android:hint="Enter Name"
             android:padding="12dp"
@@ -59,8 +59,8 @@
 
         <ImageView
             android:id="@+id/imageView22"
-            android:layout_width="169dp"
-            android:layout_height="162dp"
+            android:layout_width="101dp"
+            android:layout_height="106dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="59dp"
             android:layout_marginBottom="48dp"
@@ -72,10 +72,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="488dp"
-        android:layout_height="492dp"
+        android:layout_width="341dp"
+        android:layout_height="389dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="13dp"
         android:layout_marginEnd="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,70 +82,62 @@
 
         <ImageView
             android:id="@+id/imageView32"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="26dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="33dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView31"
             app:srcCompat="@drawable/monthf" />
 
         <ImageView
             android:id="@+id/imageView31"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="34dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView30"
             app:srcCompat="@drawable/curref" />
 
         <ImageView
             android:id="@+id/imageView30"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="37dp"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintEnd_toStartOf="@+id/editTextEmail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="48dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView29"
             app:srcCompat="@drawable/mailf" />
 
         <TextView
             android:id="@+id/textViewAge"
-            android:layout_width="62dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="262dp"
-            android:text="Age"
+            android:layout_width="107dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="149dp"
+            android:text="Budget Limit"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView29"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/editTextAge2"
-            android:layout_width="336dp"
-            android:layout_height="wrap_content"
+            android:layout_width="254dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="6dp"
             android:background="@drawable/inputbg"
-            android:hint="Enter Age"
+            android:hint="Enter Budget"
             android:inputType="number"
             android:padding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewAge" />
 
+
         <ImageView
             android:id="@+id/imageView29"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="30dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginTop="25dp"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintEnd_toStartOf="@+id/editTextAge2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/agef" />
@@ -155,23 +146,20 @@
             android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="273dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="221dp"
             android:text="Email"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView30"
             app:layout_constraintTop_toBottomOf="@+id/editTextAge2" />
 
         <EditText
             android:id="@+id/editTextEmail"
-            android:layout_width="333dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="3dp"
+            android:layout_width="254dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="14dp"
             android:background="@drawable/inputbg"
             android:hint="Enter Email"
             android:inputType="textEmailAddress"
@@ -183,21 +171,20 @@
             android:id="@+id/textViewCurrency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="242dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="198dp"
             android:text="Currency"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
         <Spinner
             android:id="@+id/spinnerCurrency"
-            android:layout_width="332dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="254dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="14dp"
             android:background="@drawable/inputbg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCurrency" />
@@ -206,29 +193,28 @@
             android:id="@+id/textViewBudgetMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="196dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="166dp"
             android:text="Budget Month"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerCurrency" />
 
         <Spinner
             android:id="@+id/spinnerBudgetMonth"
-            android:layout_width="330dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="254dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="14dp"
             android:background="@drawable/inputbg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewBudgetMonth" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:layout_width="463dp"
-        android:layout_height="108dp"
+        android:layout_width="345dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="400dp"
         android:background="@drawable/rounded_backgroundblue"
@@ -245,8 +231,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -256,8 +242,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -267,8 +253,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -278,8 +264,8 @@
         <!-- User Icon -->
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
 
@@ -288,10 +274,10 @@
 
     <Button
         android:id="@+id/buttonSave"
-        android:layout_width="270dp"
-        android:layout_height="64dp"
+        android:layout_width="208dp"
+        android:layout_height="37dp"
         android:layout_marginStart="135dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="135dp"
         android:background="@drawable/rounded_border_black"
         android:fontFamily="@font/roboto_black"

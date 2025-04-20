@@ -12,6 +12,7 @@ import java.util.*
 import java.io.FileOutputStream
 import java.io.OutputStreamWriter
 import android.content.Intent
+import android.util.Log
 
 class Expenseform : AppCompatActivity() {
 
@@ -75,7 +76,6 @@ class Expenseform : AppCompatActivity() {
 
         // Set the button click listener to handle form submission
         addExpenseButton.setOnClickListener {
-            // Get the user inputs from the EditText and Spinner
             val title = titleEditText.text.toString().trim()
             val amount = amountEditText.text.toString().trim()
             val category = categorySpinner.selectedItem.toString()
@@ -87,7 +87,6 @@ class Expenseform : AppCompatActivity() {
             } else {
                 // Prepare the expense data to be stored
                 val expenseData = "Title: $title\nAmount: $amount\nCategory: $category\nDate: $date\n\n"
-
                 // Store the data in internal storage (append mode)
                 try {
                     val fileOutputStream: FileOutputStream = openFileOutput("expenses.txt", MODE_APPEND) // Use MODE_APPEND to add data
@@ -102,6 +101,8 @@ class Expenseform : AppCompatActivity() {
 
                     // Show a success message
                     Toast.makeText(this, "Expense Added Successfully", Toast.LENGTH_SHORT).show()
+                    Log.d("ExpenseForm", "Title: $title, Amount: $amount, Category: $category, Date: $date")
+
                 } catch (e: Exception) {
                     Toast.makeText(this, "Error saving expense", Toast.LENGTH_SHORT).show()
                 }

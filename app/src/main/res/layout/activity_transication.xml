@@ -10,24 +10,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="447dp"
-        android:layout_height="234dp"
+        android:layout_width="295dp"
+        android:layout_height="168dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="31dp"
         android:background="@drawable/trancash"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingTop="90dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="238dp"
-            android:layout_height="53dp"
+            android:layout_width="211dp"
+            android:layout_height="49dp"
             android:background="@drawable/cardviewsd"
             android:fontFamily="@font/poppins_bold"
             android:text="12,000"
@@ -38,8 +38,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout12"
-        android:layout_width="445dp"
-        android:layout_height="293dp"
+        android:layout_width="298dp"
+        android:layout_height="181dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="34dp"
@@ -54,14 +54,15 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="238dp"
-            android:layout_height="53dp"
+            android:layout_width="154dp"
+            android:layout_height="36dp"
             android:background="@drawable/cardviewsd"
             android:fontFamily="@font/poppins_bold"
             android:text="12,000"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="34sp" />
+            android:textSize="24sp"
+            android:translationY="5dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,8 +90,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="445dp"
-        android:layout_height="293dp"
+        android:layout_width="299dp"
+        android:layout_height="184dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="34dp"
@@ -105,14 +106,15 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="247dp"
-            android:layout_height="53dp"
+            android:layout_width="154dp"
+            android:layout_height="36dp"
             android:background="@drawable/cardviewsd"
             android:fontFamily="@font/poppins_bold"
             android:text="12,000"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="34sp" />
+            android:textSize="24sp"
+            android:translationY="5dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -138,8 +140,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="463dp"
-        android:layout_height="108dp"
+        android:id="@+id/linearLayout7"
+        android:layout_width="345dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="400dp"
         android:background="@drawable/rounded_backgroundblue"
@@ -156,8 +159,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -167,8 +170,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -178,8 +181,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -189,8 +192,8 @@
         <!-- User Icon -->
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
 

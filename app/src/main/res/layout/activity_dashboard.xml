@@ -15,20 +15,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_blue_gradient"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-166dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/monthly_cash_flow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="133dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="133dp"
             android:fontFamily="@font/roboto_black"
             android:text="₹2,40,081"
             android:textColor="#FFFFFF"
-            android:textSize="60sp"
+            android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -41,23 +41,22 @@
             android:layout_marginEnd="172dp"
             android:text="monthly cash flow"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/monthly_cash_flow" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_viewin"
-            android:layout_width="445dp"
-            android:layout_height="144dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="47dp"
+            android:layout_width="310dp"
+            android:layout_height="105dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             android:backgroundTint="#FFFFFF"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_view">
 
@@ -78,13 +77,13 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="104dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="64dp"
+                        android:layout_height="58dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/income" />
 
                     <LinearLayout
-                        android:layout_width="187dp"
+                        android:layout_width="233dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -97,16 +96,16 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Income"
                             android:textColor="#070707"
-                            android:textSize="20sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/income_value"
-                            android:layout_width="wrap_content"
+                            android:layout_width="146dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
                             android:text="₹4,00,000"
                             android:textColor="#121212"
-                            android:textSize="34sp" />
+                            android:textSize="24sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -117,17 +116,16 @@
 
         <androidx.cardview.widget.CardView
             android:id="@id/card_view"
-            android:layout_width="445dp"
-            android:layout_height="144dp"
-            android:layout_marginStart="48dp"
+            android:layout_width="310dp"
+            android:layout_height="105dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="47dp"
+            android:layout_marginEnd="32dp"
             android:backgroundTint="#FFFFFF"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/monthly_label">
 
@@ -148,13 +146,13 @@
 
                     <ImageView
                         android:id="@id/imageView"
-                        android:layout_width="104dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="156dp"
+                        android:layout_height="58dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/expense" />
 
                     <LinearLayout
-                        android:layout_width="187dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -167,16 +165,16 @@
                             android:fontFamily="@font/roboto_bold"
                             android:text="Expense"
                             android:textColor="#070707"
-                            android:textSize="20sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/expense_value"
-                            android:layout_width="wrap_content"
+                            android:layout_width="147dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="₹4,00,000"
+                            android:text="₹400,000"
                             android:textColor="#121212"
-                            android:textSize="34sp" />
+                            android:textSize="24sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -187,341 +185,164 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
-            android:layout_width="553dp"
-            android:layout_height="634dp"
-            android:layout_marginTop="200dp"
+            android:layout_width="391dp"
+            android:layout_height="461dp"
+            android:layout_marginTop="32dp"
             android:foregroundGravity="center"
             app:cardCornerRadius="35dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_view"
+            app:layout_constraintTop_toBottomOf="@+id/card_viewin"
             tools:foregroundGravity="center">
 
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="362dp"
-                android:layout_height="138dp"
-                android:translationX="100dp"
-                android:translationY="200dp"
-                app:srcCompat="@drawable/in" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="395dp"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="362dp"
-                android:layout_height="138dp"
-                android:translationX="100dp"
-                android:translationY="300dp"
-                app:srcCompat="@drawable/ex" />
+                <HorizontalScrollView
+                    android:id="@+id/onhorz"
+                    android:layout_width="392dp"
+                    android:layout_height="106dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:layout_gravity="center"
-                android:scrollbars="none"
-                android:translationY="-190dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/dhouse"
+                            android:layout_width="116dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/dhouse" />
+
+                        <ImageView
+                            android:id="@+id/dfood"
+                            android:layout_width="132dp"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/dfood" />
+
+                        <ImageView
+                            android:id="@+id/dhealth"
+                            android:layout_width="132dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/dhealth" />
+
+                        <ImageView
+                            android:id="@+id/dedu"
+                            android:layout_width="132dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/dedu" />
+
+                        <ImageView
+                            android:id="@+id/denter"
+                            android:layout_width="132dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/denter" />
+
+                        <ImageView
+                            android:id="@+id/dother"
+                            android:layout_width="132dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/dmenu" />
+                    </LinearLayout>
+                </HorizontalScrollView>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <!-- Food & Drinks Card -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="177dp"
-                        android:layout_height="166dp"
-
-                        android:background="#FFEB3B"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true"> <!-- Yellow background color -->
-
-                        <LinearLayout
-                            android:layout_width="162dp"
-                            android:layout_height="151dp"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <!-- Icon for Food & Drinks -->
-                            <!-- Replace with actual food icon -->
-
-                            <!-- Percentage for Food & Drinks -->
-
-                            <ImageView
-                                android:layout_width="71dp"
-                                android:layout_height="69dp"
-                                android:src="@drawable/house" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Housing"
-                                android:textColor="#000000"
-                                android:textSize="20sp" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Entertainment Card -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="177dp"
-                        android:layout_height="166dp"
-
-                        android:background="#FFEB3B"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true"> <!-- Yellow background color -->
-
-                        <LinearLayout
-                            android:layout_width="162dp"
-                            android:layout_height="151dp"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <!-- Icon for Food & Drinks -->
-                            <!-- Replace with actual food icon -->
-
-                            <!-- Percentage for Food & Drinks -->
-
-                            <ImageView
-                                android:layout_width="71dp"
-                                android:layout_height="69dp"
-                                android:src="@drawable/food" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Food"
-                                android:textColor="#000000"
-                                android:textSize="20sp" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="177dp"
-                        android:layout_height="166dp"
-
-                        android:background="#FFEB3B"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true"> <!-- Yellow background color -->
-
-                        <LinearLayout
-                            android:layout_width="162dp"
-                            android:layout_height="151dp"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <!-- Icon for Food & Drinks -->
-                            <!-- Replace with actual food icon -->
-
-                            <!-- Percentage for Food & Drinks -->
-
-                            <ImageView
-                                android:layout_width="71dp"
-                                android:layout_height="69dp"
-                                android:src="@drawable/cardiogram" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Health"
-                                android:textColor="#000000"
-                                android:textSize="20sp" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="177dp"
-                        android:layout_height="166dp"
-
-                        android:background="#FFEB3B"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true"> <!-- Yellow background color -->
-
-                        <LinearLayout
-                            android:layout_width="162dp"
-                            android:layout_height="151dp"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <!-- Icon for Food & Drinks -->
-                            <!-- Replace with actual food icon -->
-
-                            <!-- Percentage for Food & Drinks -->
-
-                            <ImageView
-                                android:layout_width="71dp"
-                                android:layout_height="69dp"
-                                android:src="@drawable/graduation" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Education"
-                                android:textColor="#000000"
-                                android:textSize="20sp" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="177dp"
-                        android:layout_height="166dp"
-
-                        android:background="#FFEB3B"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true"> <!-- Yellow background color -->
-
-                        <LinearLayout
-                            android:layout_width="162dp"
-                            android:layout_height="151dp"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <!-- Icon for Food & Drinks -->
-                            <!-- Replace with actual food icon -->
-
-                            <!-- Percentage for Food & Drinks -->
-
-                            <ImageView
-                                android:layout_width="71dp"
-                                android:layout_height="69dp"
-                                android:src="@drawable/cinema" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Entertainment"
-                                android:textColor="#000000"
-                                android:textSize="20sp" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="177dp"
-                        android:layout_height="166dp"
-
-                        android:background="#FFEB3B"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true"> <!-- Yellow background color -->
-
-                        <LinearLayout
-                            android:layout_width="162dp"
-                            android:layout_height="151dp"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <!-- Icon for Food & Drinks -->
-                            <!-- Replace with actual food icon -->
-
-                            <!-- Percentage for Food & Drinks -->
-
-                            <ImageView
-                                android:layout_width="71dp"
-                                android:layout_height="69dp"
-                                android:src="@drawable/menu" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_bold"
-                                android:text="Other"
-                                android:textColor="#000000"
-                                android:textSize="20sp" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="345dp"
+                    android:layout_height="73dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="440dp"
+                    android:background="@drawable/rounded_backgroundblue"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:translationX="25dp"
+                    android:translationY="350dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+
+                        android:layout_weight="1"
+
+                        app:srcCompat="@drawable/home" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+
+                        android:layout_weight="1"
+
+                        app:srcCompat="@drawable/moneybag" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+
+                        android:layout_weight="1"
+
+                        app:srcCompat="@drawable/file" />
+
+                    <!-- User Icon -->
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+
+                        app:srcCompat="@drawable/user" />
                 </LinearLayout>
-            </HorizontalScrollView>
-
-            <LinearLayout
-                android:layout_width="463dp"
-                android:layout_height="108dp"
-                android:background="@drawable/rounded_backgroundblue"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:translationX="40dp"
-                android:translationY="450dp">
-
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-
-                    android:layout_weight="1"
-
-                    app:srcCompat="@drawable/home" />
-
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-
-                    android:layout_weight="1"
-
-                    app:srcCompat="@drawable/moneybag" />
-
+                    android:id="@+id/imageView3"
+                    android:layout_width="275dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginEnd="65dp"
+                    android:layout_marginBottom="-330dp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ex" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-
-                    android:layout_weight="1"
-
-                    app:srcCompat="@drawable/file" />
-
-                <!-- User Icon -->
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-
-                    app:srcCompat="@drawable/user" />
-            </LinearLayout>
+                    android:id="@+id/imageView2"
+                    android:layout_width="245dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="74dp"
+                    android:layout_marginEnd="75dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/in" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.cardview.widget.CardView>

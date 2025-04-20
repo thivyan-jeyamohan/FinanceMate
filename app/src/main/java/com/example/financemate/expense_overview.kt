@@ -2,6 +2,7 @@ package com.example.financemate
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,10 +15,7 @@ import java.io.InputStreamReader
 import java.text.NumberFormat
 import java.util.Locale
 
-
-
 class expense_overview : AppCompatActivity() {
-
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -43,6 +41,37 @@ class expense_overview : AppCompatActivity() {
 
             val profileu: ImageView = findViewById(R.id.imageView11)
             profileu.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+
+            val b1: Button = findViewById(R.id.buttonhousevalue)
+            b1.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+            val b2: Button = findViewById(R.id.buttonfoodvalue)
+            b1.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+            val b3: Button = findViewById(R.id.buttoneduvalue)
+            b1.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+            val b4: Button = findViewById(R.id.buttonhealthvalue)
+            b1.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+            val b5: Button = findViewById(R.id.buttonentertainvalue)
+            b1.setOnClickListener {
+                val intent = Intent(this, profile::class.java)
+                startActivity(intent)
+            }
+            val b6: Button = findViewById(R.id.buttonothervalue)
+            b1.setOnClickListener {
                 val intent = Intent(this, profile::class.java)
                 startActivity(intent)
             }
@@ -106,7 +135,7 @@ class expense_overview : AppCompatActivity() {
 
         // Function to format the amount with currency symbol
         private fun formatCurrency(amount: Double): String {
-            return NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(amount)
+            return NumberFormat.getCurrencyInstance(Locale("si", "LK")).format(amount)
         }
 }
 

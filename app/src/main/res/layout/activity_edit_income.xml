@@ -15,9 +15,21 @@
 
     <!-- Add Income Image (optional) -->
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="149dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginEnd="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton"
+        app:srcCompat="@drawable/viewincomebtn" />
+
     <LinearLayout
-        android:layout_width="463dp"
-        android:layout_height="108dp"
+        android:layout_width="345dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="400dp"
         android:background="@drawable/rounded_backgroundblue"
@@ -34,8 +46,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -45,8 +57,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -56,8 +68,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -67,8 +79,8 @@
         <!-- User Icon -->
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
 
@@ -77,8 +89,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="467dp"
-        android:layout_height="183dp"
+        android:layout_width="335dp"
+        android:layout_height="133dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="14dp"
@@ -90,10 +102,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="409dp"
-        android:layout_height="369dp"
+        android:layout_width="329dp"
+        android:layout_height="253dp"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,13 +119,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Expense Name"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/titleEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="327dp"
+            android:layout_height="42dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/inputbg"
             android:hint="Transaction name"
@@ -126,13 +138,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Amount"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/amountEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="327dp"
+            android:layout_height="42dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/inputbg"
             android:hint="Amount"
@@ -145,13 +157,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Date"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/dateEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="327dp"
+            android:layout_height="42dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/inputbg"
             android:clickable="true"
@@ -169,8 +181,8 @@
 
     <ImageView
         android:id="@+id/saveButton"
-        android:layout_width="308dp"
-        android:layout_height="152dp"
+        android:layout_width="219dp"
+        android:layout_height="69dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="65dp"
@@ -182,15 +194,15 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="141dp"
-        android:layout_height="116dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="164dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="116dp"
         android:contentDescription="Income Icon"
         android:src="@drawable/moneyex"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 

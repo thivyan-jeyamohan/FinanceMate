@@ -3,9 +3,9 @@ package com.example.financemate
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import android.widget.TextView
 import android.content.Intent
 import java.io.BufferedReader
 import java.io.FileInputStream
@@ -13,12 +13,17 @@ import java.io.InputStreamReader
 import java.io.FileOutputStream
 import android.util.Log
 import android.graphics.Color
+import java.io.File
 
 class display_expense : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_expense)
+
+        val file = File(filesDir, "expenses.txt")
+        val filePath = file.absolutePath
+        Log.d("FilePath", "File path: $filePath")
 
         val home: ImageView = findViewById(R.id.imageView8)
         home.setOnClickListener {
@@ -44,10 +49,16 @@ class display_expense : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // LinearLayout container for expense data
+        // Add ImageView for restoring deleted data
+        val restoreButton: ImageView = findViewById(R.id.imageView6)
+        restoreButton.setOnClickListener {
+            restoreDeletedIncomes()
+        }
+
+        // LinearLayout container for income data
         val expenseListContainer: LinearLayout = findViewById(R.id.expenseListContainer)
 
-        // Load and display stored expenses
+        // Load and display stored incomes
         loadExpenses(expenseListContainer)
     }
 
@@ -65,7 +76,7 @@ class display_expense : AppCompatActivity() {
             var currentCategory = ""
             var currentDate = ""
 
-            // Read each line and create a CardView for each expense entry
+            // Read each line and create a CardView for each income entry
             while (bufferedReader.readLine().also { line = it } != null) {
                 // Log the line to see what we read
                 Log.d("ExpenseData", "Read line: $line")
@@ -75,23 +86,23 @@ class display_expense : AppCompatActivity() {
                     currentTitle = line.removePrefix("Title:").trim()
                 } else if (line?.startsWith("Amount:") == true) {
                     currentAmount = line.removePrefix("Amount:").trim()
+                }  else if (line?.startsWith("Date:") == true) {
+                    currentDate = line.removePrefix("Date:").trim()
                 } else if (line?.startsWith("Category:") == true) {
                     currentCategory = line.removePrefix("Category:").trim()
-                } else if (line?.startsWith("Date:") == true) {
-                    currentDate = line.removePrefix("Date:").trim()
 
-                    // Once we have all four fields, create a CardView
-                    createExpenseCard(expenseListContainer, currentTitle, currentAmount, currentCategory, currentDate)
+                    // Once we have all three fields, create a CardView
+                    createExpenseCard(expenseListContainer, currentTitle, currentAmount, currentDate,currentCategory)
                 }
             }
 
             bufferedReader.close()
 
         } catch (e: Exception) {
-            // Handle error and display a message if no expenses are found
-            Log.e("ExpenseData", "Error reading file", e)
+            // Handle error and display a message if no incomes are found
+            Log.e("IncomeData", "Error reading file", e)
             expenseListContainer.addView(TextView(this).apply {
-                text = "No expenses found."
+                text = "No Expense found."
                 textSize = 18f
                 setTextColor(resources.getColor(android.R.color.black))
             })
@@ -102,10 +113,10 @@ class display_expense : AppCompatActivity() {
         expenseListContainer: LinearLayout,
         title: String,
         amount: String,
-        category: String,
-        date: String
+        date: String,
+        category: String
     ) {
-        // Create CardView for each expense entry
+        // Create CardView for each income entry
         val cardView = CardView(this)
         cardView.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
@@ -124,7 +135,7 @@ class display_expense : AppCompatActivity() {
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
 
-        // First column (Title, Amount, Category, Date)
+        // First column (Title, Amount, Date)
         val firstColumnLayout = LinearLayout(this)
         firstColumnLayout.orientation = LinearLayout.VERTICAL
         firstColumnLayout.layoutParams = LinearLayout.LayoutParams(
@@ -145,20 +156,20 @@ class display_expense : AppCompatActivity() {
         amountTextView.setTextColor(resources.getColor(android.R.color.black))
         amountTextView.setPadding(0, 0, 0, 10)
 
-        val categoryTextView = TextView(this)
-        categoryTextView.text = "Category: $category"
-        categoryTextView.textSize = 16f
-        categoryTextView.setTextColor(resources.getColor(android.R.color.black))
-
         val dateTextView = TextView(this)
         dateTextView.text = "Date: $date"
         dateTextView.textSize = 16f
         dateTextView.setTextColor(resources.getColor(android.R.color.black))
 
+        val categoryTextView = TextView(this)
+        categoryTextView.text = "Category: $category"
+        categoryTextView.textSize = 16f
+        categoryTextView.setTextColor(resources.getColor(android.R.color.black))
+
         firstColumnLayout.addView(titleTextView)
         firstColumnLayout.addView(amountTextView)
-        firstColumnLayout.addView(categoryTextView)
         firstColumnLayout.addView(dateTextView)
+        firstColumnLayout.addView(categoryTextView)
 
         // Second column (Edit, Delete buttons)
         val secondColumnLayout = LinearLayout(this)
@@ -176,12 +187,12 @@ class display_expense : AppCompatActivity() {
         editButton.layoutParams = iconsize
         editButton.setPadding(0, 10, 0, 10)  // Padding between the buttons
         editButton.setOnClickListener {
-            // Start the EditExpenseActivity and pass the current data to edit
+            // Start the EditIncomeActivity and pass the current data to edit
             val intent = Intent(this, edit_expense::class.java)
             intent.putExtra("TITLE", title)
             intent.putExtra("AMOUNT", amount)
-            intent.putExtra("CATEGORY", category)
             intent.putExtra("DATE", date)
+            intent.putExtra("CATEGORY", category)
             startActivity(intent)
         }
 
@@ -191,10 +202,10 @@ class display_expense : AppCompatActivity() {
         deleteButton.layoutParams = iconsize
         deleteButton.setPadding(0, 10, 0, 10)  // Padding between the buttons
         deleteButton.setOnClickListener {
-            // Remove the expense from the file
+            // Remove the income from the file and store it in the deleted file
             removeExpenseFromFile(title)  // Use the title as the unique identifier
 
-            // Re-load the expenses after deletion
+            // Re-load the incomes after deletion
             loadExpenses(expenseListContainer)
         }
 
@@ -209,7 +220,7 @@ class display_expense : AppCompatActivity() {
         // Add the horizontal layout to the card view
         cardView.addView(horizontalLayout)
 
-        // Add CardView to the expense list container
+        // Add CardView to the income list container
         expenseListContainer.addView(cardView)
 
         // Add margin top and bottom to each CardView
@@ -221,27 +232,24 @@ class display_expense : AppCompatActivity() {
 
     private fun removeExpenseFromFile(title: String) {
         try {
-            // Read the file contents into a StringBuilder
+            // Read the incomes file into a StringBuilder
             val fileInputStream: FileInputStream = openFileInput("expenses.txt")
             val inputStreamReader = InputStreamReader(fileInputStream)
             val bufferedReader = BufferedReader(inputStreamReader)
 
-            val updatedData = StringBuilder()
+            val updatedData = StringBuilder()  // Stores remaining data
+            val deletedData = StringBuilder()  // Stores deleted data
+
             var line: String?
             var isDeleting = false
 
+            // Read each line and check if it is to be deleted
             while (bufferedReader.readLine().also { line = it } != null) {
-                // If the line contains the title to delete, skip the next three lines (Amount, Category, Date)
                 if (line?.startsWith("Title: $title") == true) {
                     isDeleting = true
-                }
-
-                if (isDeleting) {
-                    // Skip the next three lines: Amount, Category, and Date
-                    bufferedReader.readLine() // Skip Amount line
-                    bufferedReader.readLine() // Skip Category line
-                    bufferedReader.readLine() // Skip Date line
-                    isDeleting = false
+                    deletedData.append(line).append("\n")  // Save deleted title
+                    deletedData.append(bufferedReader.readLine()).append("\n")  // Skip the amount
+                    deletedData.append(bufferedReader.readLine()).append("\n")  // Skip the date
                 } else {
                     updatedData.append(line).append("\n")
                 }
@@ -249,13 +257,62 @@ class display_expense : AppCompatActivity() {
 
             bufferedReader.close()
 
-            // Write the updated data back to the file, excluding the deleted expense entry
+            // Write the updated data back to the incomes file
             val fileOutputStream: FileOutputStream = openFileOutput("expenses.txt", MODE_PRIVATE)
             fileOutputStream.write(updatedData.toString().toByteArray())
             fileOutputStream.close()
+
+            // Write deleted data to the deleted_expenses.txt file
+            val deletedFileOutputStream: FileOutputStream = openFileOutput("deleted_expenses.txt", MODE_APPEND)
+            deletedFileOutputStream.write(deletedData.toString().toByteArray())
+            deletedFileOutputStream.close()
 
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
+
+
+    private fun restoreDeletedIncomes() {
+        try {
+            val fileInputStream: FileInputStream = openFileInput("deleted_expenses.txt")
+            val inputStreamReader = InputStreamReader(fileInputStream)
+            val bufferedReader = BufferedReader(inputStreamReader)
+
+            val restoredData = StringBuilder()
+            var line: String?
+
+            // Read the deleted incomes and restore them to the original incomes file
+            while (bufferedReader.readLine().also { line = it } != null) {
+                restoredData.append(line).append("\n")
+            }
+
+            bufferedReader.close()
+
+            // Append the deleted data to expenses.txt
+            val fileOutputStream: FileOutputStream = openFileOutput("expenses.txt", MODE_APPEND)
+            fileOutputStream.write(restoredData.toString().toByteArray())
+            fileOutputStream.close()
+
+            // Empty the deleted_expenses.txt file after restoring
+            val deletedFileOutputStream: FileOutputStream = openFileOutput("deleted_expenses.txt", MODE_PRIVATE)
+            deletedFileOutputStream.write("".toByteArray())  // Clear the content of the file
+            deletedFileOutputStream.close()
+
+            // Reload the incomes after restoration
+            loadExpenses(findViewById(R.id.expenseListContainer))
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 }
+
+
+
+
+
+
+
+

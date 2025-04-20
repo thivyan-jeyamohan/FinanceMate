@@ -2,6 +2,7 @@ package com.example.financemate
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -19,7 +20,7 @@ class Onboard1 : AppCompatActivity() {
             insets
         }
 
-        val next: CardView = findViewById(R.id.getstart)
+        val next: ImageView = findViewById(R.id.getstart)
         next.setOnClickListener {
             val intent = Intent(this, Onboard2::class.java)
             startActivity(intent)

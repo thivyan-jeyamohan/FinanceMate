@@ -6,429 +6,420 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/house"
-        android:layout_width="472dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="38dp"
-        android:background="@drawable/cardviewsd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entertain">
-
-        <ImageView
-            android:id="@+id/imageViewother"
-            android:layout_width="124dp"
-            android:layout_height="92dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/menupop" />
-
-        <LinearLayout
-            android:layout_width="287dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewother"
-                android:layout_width="191dp"
-                android:layout_height="59dp"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="12,000"
-                android:textAlignment="inherit"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonother"
-                    android:layout_width="259dp"
-                    android:layout_height="54dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#01173C"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Set Budget"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/buttonothervalue"
-                    android:layout_width="150dp"
-                    android:layout_height="54dp"
-                    android:backgroundTint="#FDFBFB"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget Value"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/entertain"
-        android:layout_width="472dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="38dp"
-        android:background="@drawable/cardviewsd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edu">
-
-        <ImageView
-            android:id="@+id/imageViewentertain"
-            android:layout_width="124dp"
-            android:layout_height="92dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/cinipop" />
-
-        <LinearLayout
-            android:layout_width="287dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewentertain"
-                android:layout_width="191dp"
-                android:layout_height="59dp"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="12,000"
-                android:textAlignment="inherit"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonentertain"
-                    android:layout_width="259dp"
-                    android:layout_height="54dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#01173C"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Set Budget"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/buttonentertainvalue"
-                    android:layout_width="150dp"
-                    android:layout_height="54dp"
-                    android:backgroundTint="#FDFBFB"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget Value"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/edu"
-        android:layout_width="472dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="34dp"
-        android:background="@drawable/cardviewsd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/health">
-
-        <ImageView
-            android:id="@+id/imageViewedu"
-            android:layout_width="124dp"
-            android:layout_height="92dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/gradpop" />
-
-        <LinearLayout
-            android:layout_width="287dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewedu"
-                android:layout_width="191dp"
-                android:layout_height="59dp"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="12,000"
-                android:textAlignment="inherit"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonedu"
-                    android:layout_width="259dp"
-                    android:layout_height="54dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#01173C"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Set Budget"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/buttoneduvalue"
-                    android:layout_width="150dp"
-                    android:layout_height="54dp"
-                    android:backgroundTint="#FDFBFB"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget Value"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/health"
-        android:layout_width="472dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="34dp"
-        android:background="@drawable/cardviewsd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food">
-
-        <ImageView
-            android:id="@+id/imageViewhealth"
-            android:layout_width="124dp"
-            android:layout_height="92dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/heartpop" />
-
-        <LinearLayout
-            android:layout_width="287dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewhealth"
-                android:layout_width="191dp"
-                android:layout_height="59dp"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="12,000"
-                android:textAlignment="inherit"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonhealth"
-                    android:layout_width="259dp"
-                    android:layout_height="54dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#01173C"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Set Budget"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/buttonhealthvalue"
-                    android:layout_width="150dp"
-                    android:layout_height="54dp"
-                    android:backgroundTint="#FDFBFB"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget Value"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/food"
-        android:layout_width="472dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="34dp"
-        android:background="@drawable/cardviewsd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home">
-
-        <ImageView
-            android:id="@+id/imageViewfood"
-            android:layout_width="124dp"
-            android:layout_height="92dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/foodpop" />
-
-        <LinearLayout
-            android:layout_width="287dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewfood"
-                android:layout_width="191dp"
-                android:layout_height="59dp"
-                android:fontFamily="@font/poppins_bold"
-                android:gravity="center"
-                android:text="12,000"
-                android:textAlignment="inherit"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/buttonfood"
-                    android:layout_width="259dp"
-                    android:layout_height="54dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#01173C"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Set Budget"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/buttonfoodvalue"
-                    android:layout_width="150dp"
-                    android:layout_height="54dp"
-                    android:backgroundTint="#FDFBFB"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget Value"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/home"
-        android:layout_width="472dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="34dp"
-        android:background="@drawable/cardviewsd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="704dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageViewhome"
-            android:layout_width="124dp"
-            android:layout_height="92dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/housepop" />
-
         <LinearLayout
-            android:layout_width="287dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewhouse"
-                android:layout_width="191dp"
-                android:layout_height="59dp"
-                android:fontFamily="@font/poppins_bold"
+            <LinearLayout
+                android:id="@+id/home"
+                android:layout_width="357dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/cardviewsd"
                 android:gravity="center"
-                android:text="12,000"
-                android:textAlignment="inherit"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewhome"
+                    android:layout_width="87dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/housepop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewhouse"
+                        android:layout_width="189dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="12,000"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonhouse"
+                            android:layout_width="117dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#01173C"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="House"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonhousevalue"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:backgroundTint="#FDFBFB"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Budget Value"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:id="@+id/food"
+                android:layout_width="357dp"
+                android:layout_height="100dp"
 
-                <Button
-                    android:id="@+id/buttonhouse"
-                    android:layout_width="259dp"
-                    android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/cardviewsd"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewfood"
+                    android:layout_width="87dp"
+                    android:layout_height="60dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#01173C"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Set Budget"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    app:srcCompat="@drawable/foodpop" />
 
-                <Button
-                    android:id="@+id/buttonhousevalue"
-                    android:layout_width="150dp"
-                    android:layout_height="54dp"
-                    android:backgroundTint="#FDFBFB"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget Value"
-                    android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewfood"
+                        android:layout_width="189dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="12,000"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonfood"
+                            android:layout_width="117dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#01173C"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Food"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonfoodvalue"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:backgroundTint="#FDFBFB"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Budget Value"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/health"
+                android:layout_width="357dp"
+                android:layout_height="100dp"
+
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/cardviewsd"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewhealth"
+                    android:layout_width="87dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/heartpop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewhealth"
+                        android:layout_width="189dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="12,000"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonhealth"
+                            android:layout_width="117dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#01173C"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Health"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonhealthvalue"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:backgroundTint="#FDFBFB"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Budget Value"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edu"
+                android:layout_width="357dp"
+                android:layout_height="100dp"
+
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/cardviewsd"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewedu"
+                    android:layout_width="87dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/gradpop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewedu"
+                        android:layout_width="189dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="12,000"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonedu"
+                            android:layout_width="117dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#01173C"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Education"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttoneduvalue"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:backgroundTint="#FDFBFB"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Budget Value"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trans"
+                android:layout_width="357dp"
+                android:layout_height="100dp"
+
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/cardviewsd"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewentertain"
+                    android:layout_width="87dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cinipop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewentertain"
+                        android:layout_width="189dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="12,000"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonentertain"
+                            android:layout_width="117dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#01173C"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Entertain"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonentertainvalue"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:backgroundTint="#FDFBFB"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Budget Value"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/other"
+                android:layout_width="357dp"
+                android:layout_height="100dp"
+
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/cardviewsd"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewother"
+                    android:layout_width="87dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/menupop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewother"
+                        android:layout_width="189dp"
+                        android:layout_height="35dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:text="12,000"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonother"
+                            android:layout_width="117dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#01173C"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="other"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/buttonothervalue"
+                            android:layout_width="100dp"
+                            android:layout_height="36dp"
+                            android:backgroundTint="#FDFBFB"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Budget Value"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
-        android:layout_width="463dp"
-        android:layout_height="108dp"
+        android:layout_width="345dp"
+        android:layout_height="73dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="85dp"
         android:layout_marginBottom="400dp"
@@ -446,8 +437,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -457,8 +448,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -468,8 +459,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -479,8 +470,8 @@
         <!-- User Icon -->
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
 

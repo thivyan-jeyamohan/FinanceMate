@@ -14,21 +14,21 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="463dp"
-        android:layout_height="178dp"
+        android:layout_width="361dp"
+        android:layout_height="124dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/addexpense" />
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="144dp"
-        android:layout_height="116dp"
+        android:layout_width="85dp"
+        android:layout_height="64dp"
         android:layout_marginStart="130dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="114dp"
@@ -39,19 +39,26 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView14" />
 
     <!-- Input fields for the form -->
+
+    <!-- Add Expense Button -->
+
+    <!-- View Stored Expense Button -->
+
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="432dp"
-        android:layout_height="372dp"
+        android:layout_width="335dp"
+        android:layout_height="330dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="21dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView15">
 
         <!-- Expense Name -->
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
@@ -59,12 +66,12 @@
             android:fontFamily="sans-serif"
             android:text="  Expense Name"
             android:textColor="#424141"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/transaction_name"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="@drawable/inputbg"
@@ -80,12 +87,12 @@
             android:fontFamily="sans-serif"
             android:text="  Amount"
             android:textColor="#424141"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/amount"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="@drawable/inputbg"
@@ -101,12 +108,12 @@
             android:fontFamily="sans-serif"
             android:text="  Category"
             android:textColor="#424141"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/category_spinner"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="@drawable/inputbg"
@@ -121,12 +128,12 @@
             android:fontFamily="sans-serif"
             android:text="  Date"
             android:textColor="#424141"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/date"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:background="@drawable/inputbg"
             android:clickable="true"
@@ -142,16 +149,12 @@
 
     </LinearLayout>
 
-    <!-- Add Expense Button -->
-
-    <!-- View Stored Expense Button -->
-
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="277dp"
-        android:layout_height="88dp"
+        android:layout_width="215dp"
+        android:layout_height="52dp"
         android:layout_marginStart="53dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
@@ -161,8 +164,8 @@
 
     <ImageView
         android:id="@+id/viewStoredExpenseButton"
-        android:layout_width="252dp"
-        android:layout_height="66dp"
+        android:layout_width="207dp"
+        android:layout_height="42dp"
         android:layout_marginStart="53dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="61dp"
@@ -173,8 +176,8 @@
         app:srcCompat="@drawable/viewexpenses" />
 
     <LinearLayout
-        android:layout_width="463dp"
-        android:layout_height="108dp"
+        android:layout_width="345dp"
+        android:layout_height="73dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="400dp"
         android:background="@drawable/rounded_backgroundblue"
@@ -191,8 +194,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -202,8 +205,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -213,8 +216,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
 
             android:layout_weight="1"
@@ -224,8 +227,8 @@
         <!-- User Icon -->
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_weight="1"
 

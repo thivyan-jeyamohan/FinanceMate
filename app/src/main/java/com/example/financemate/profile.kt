@@ -1,9 +1,12 @@
 package com.example.financemate
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -12,10 +15,16 @@ import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.text.NumberFormat
+import java.util.Locale
 
 class profile : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
+    private var userAge: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,11 +89,26 @@ class profile : AppCompatActivity() {
             val currency = currencySpinner.selectedItem.toString()
             val budgetMonth = budgetMonthSpinner.selectedItem.toString()
 
+            val ages = ageEditText.text.toString().toIntOrNull() ?: 0
+            userAge = ages
+            Log.d("ProfileActivity", "The user age is: $userAge")
+
+            // Calculate and display total expense
+            val totalExpense = calculateTotalExpense()
+
+            if (totalExpense > userAge) {
+                Log.d("ProfileActivity", "The user age is: $totalExpense")
+                Log.d("ProfileActivity", "The user age is: $userAge")
+                sendNegativebudgetlimitNotification()
+            }
+
             if (validateForm(name, age, email)) {
                 saveData(name, age, email, currency, budgetMonth)
                 Toast.makeText(this, "Profile Saved", Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
 
     // Function to validate the form
@@ -149,4 +173,65 @@ class profile : AppCompatActivity() {
         )
         budgetMonthSpinner.setSelection(budgetMonthOptions.indexOf(budgetMonth))
     }
+
+
+    // Function to calculate total expense from the file
+    private fun calculateTotalExpense(): Double {
+        var totalAmount = 0.0
+        try {
+            val fileInputStream = openFileInput("expenses.txt")
+            val inputStreamReader = InputStreamReader(fileInputStream)
+            val bufferedReader = BufferedReader(inputStreamReader)
+
+            var line: String?
+            while (bufferedReader.readLine().also { line = it } != null) {
+                if (line?.startsWith("Amount:") == true) {
+                    val currentAmount = line.removePrefix("Amount:").trim()
+                    totalAmount += currentAmount.toDoubleOrNull() ?: 0.0
+                }
+            }
+            bufferedReader.close()
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return totalAmount
+    }
+
+
+    private fun formatCurrency(amount: Double): String {
+        return NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(amount)
+    }
+
+
+    private fun sendNegativebudgetlimitNotification() {
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        // Create a notification channel for Android 8.0 and above
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            val channelId = "budgetlimit_alert_channel"
+            val channelName = "budgetlimit Alert"
+            val channelDescription = "Notifies when budgetlimit is aboved"
+            val importance = NotificationManager.IMPORTANCE_HIGH
+            val channel = NotificationChannel(channelId, channelName, importance).apply {
+                description = channelDescription
+            }
+
+            notificationManager.createNotificationChannel(channel)
+        }
+
+        // Create the notification
+        val notification = NotificationCompat.Builder(this, "budgetlimit_alert_channel")
+            .setSmallIcon(R.drawable.ic_notification)  // Set your own icon
+            .setContentTitle("budgetlimit Alert")
+            .setContentText("Your budgetlimit has gone above!")
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .build()
+
+        // Show the notification
+        notificationManager.notify(1, notification)
+    }
+
+
+
 }

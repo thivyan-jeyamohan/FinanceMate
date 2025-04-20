@@ -21,11 +21,12 @@ import java.util.*
 
 class Dashboard : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
+
+
 
 
         val home: ImageView = findViewById(R.id.imageView8)
@@ -63,13 +64,13 @@ class Dashboard : AppCompatActivity() {
         }
 
         // Find the ImageView by its ID and set the OnClickListener
-        val imageView: ImageView = findViewById(R.id.imageView12)
+        val imageView: ImageView = findViewById(R.id.imageView3)
         imageView.setOnClickListener {
             val intent = Intent(this, Expenseform::class.java)
             startActivity(intent)
         }
 
-        val imageViewin: ImageView = findViewById(R.id.imageView13)
+        val imageViewin: ImageView = findViewById(R.id.imageView2)
         imageViewin.setOnClickListener {
             val intent = Intent(this, Incomeform::class.java)
             startActivity(intent)
@@ -144,7 +145,7 @@ class Dashboard : AppCompatActivity() {
 
     // Function to format the amount with currency symbol
     private fun formatCurrency(amount: Double): String {
-        return NumberFormat.getCurrencyInstance(Locale("en", "IN")).format(amount)
+        return NumberFormat.getCurrencyInstance(Locale("si", "LK")).format(amount)
     }
 
     // Function to send a notification when cashflow is negative

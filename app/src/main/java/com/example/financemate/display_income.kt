@@ -13,12 +13,17 @@ import java.io.InputStreamReader
 import java.io.FileOutputStream
 import android.util.Log
 import android.graphics.Color
+import java.io.File
 
 class display_income : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_income)
+
+        val file = File(filesDir, "incomes.txt")
+        val filePath = file.absolutePath
+        Log.d("FilePath", "File path: $filePath")
 
         val home: ImageView = findViewById(R.id.imageView8)
         home.setOnClickListener {
@@ -42,6 +47,12 @@ class display_income : AppCompatActivity() {
         profileu.setOnClickListener {
             val intent = Intent(this, profile::class.java)
             startActivity(intent)
+        }
+
+        // Add ImageView for restoring deleted data
+        val restoreButton: ImageView = findViewById(R.id.imageView13)
+        restoreButton.setOnClickListener {
+            restoreDeletedIncomes()
         }
 
         // LinearLayout container for income data
@@ -180,7 +191,7 @@ class display_income : AppCompatActivity() {
         deleteButton.layoutParams = iconsize
         deleteButton.setPadding(0, 10, 0, 10)  // Padding between the buttons
         deleteButton.setOnClickListener {
-            // Remove the income from the file
+            // Remove the income from the file and store it in the deleted file
             removeIncomeFromFile(title)  // Use the title as the unique identifier
 
             // Re-load the incomes after deletion
@@ -210,26 +221,24 @@ class display_income : AppCompatActivity() {
 
     private fun removeIncomeFromFile(title: String) {
         try {
-            // Read the file contents into a StringBuilder
+            // Read the incomes file into a StringBuilder
             val fileInputStream: FileInputStream = openFileInput("incomes.txt")
             val inputStreamReader = InputStreamReader(fileInputStream)
             val bufferedReader = BufferedReader(inputStreamReader)
 
-            val updatedData = StringBuilder()
+            val updatedData = StringBuilder()  // Stores remaining data
+            val deletedData = StringBuilder()  // Stores deleted data
+
             var line: String?
             var isDeleting = false
 
+            // Read each line and check if it is to be deleted
             while (bufferedReader.readLine().also { line = it } != null) {
-                // If the line contains the title to delete, skip the next two lines (Amount and Date)
                 if (line?.startsWith("Title: $title") == true) {
                     isDeleting = true
-                }
-
-                if (isDeleting) {
-                    // Skip the next two lines: Amount and Date
-                    bufferedReader.readLine() // Skip Amount line
-                    bufferedReader.readLine() // Skip Date line
-                    isDeleting = false
+                    deletedData.append(line).append("\n")  // Save deleted title
+                    deletedData.append(bufferedReader.readLine()).append("\n")  // Skip the amount
+                    deletedData.append(bufferedReader.readLine()).append("\n")  // Skip the date
                 } else {
                     updatedData.append(line).append("\n")
                 }
@@ -237,15 +246,62 @@ class display_income : AppCompatActivity() {
 
             bufferedReader.close()
 
-            // Write the updated data back to the file, excluding the deleted income entry
+            // Write the updated data back to the incomes file
             val fileOutputStream: FileOutputStream = openFileOutput("incomes.txt", MODE_PRIVATE)
             fileOutputStream.write(updatedData.toString().toByteArray())
             fileOutputStream.close()
+
+            // Write deleted data to the deleted_incomes.txt file
+            val deletedFileOutputStream: FileOutputStream = openFileOutput("deleted_incomes.txt", MODE_APPEND)
+            deletedFileOutputStream.write(deletedData.toString().toByteArray())
+            deletedFileOutputStream.close()
 
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
+
+
+    private fun restoreDeletedIncomes() {
+        try {
+            val fileInputStream: FileInputStream = openFileInput("deleted_incomes.txt")
+            val inputStreamReader = InputStreamReader(fileInputStream)
+            val bufferedReader = BufferedReader(inputStreamReader)
+
+            val restoredData = StringBuilder()
+            var line: String?
+
+            // Read the deleted incomes and restore them to the original incomes file
+            while (bufferedReader.readLine().also { line = it } != null) {
+                restoredData.append(line).append("\n")
+            }
+
+            bufferedReader.close()
+
+            // Append the deleted data to incomes.txt
+            val fileOutputStream: FileOutputStream = openFileOutput("incomes.txt", MODE_APPEND)
+            fileOutputStream.write(restoredData.toString().toByteArray())
+            fileOutputStream.close()
+
+            // Empty the deleted_incomes.txt file after restoring
+            val deletedFileOutputStream: FileOutputStream = openFileOutput("deleted_incomes.txt", MODE_PRIVATE)
+            deletedFileOutputStream.write("".toByteArray())  // Clear the content of the file
+            deletedFileOutputStream.close()
+
+            // Reload the incomes after restoration
+            loadIncomes(findViewById(R.id.incomeListContainer))
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 }
+
+
+
+
+
+
 
 

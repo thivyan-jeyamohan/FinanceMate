@@ -1,0 +1,11 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- External storage path (Downloads directory) -->
+    <external-path
+        name="download_files"
+        path="Download/" />
+
+    <!-- Internal storage path (App-specific files) -->
+    <files-path
+        name="internal_files"
+        path="." /> <!-- Represents the app-specific internal storage directory -->
+</paths>

@@ -43,6 +43,14 @@ class edit_expense : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val viewex: ImageView = findViewById(R.id.imageView34)
+        viewex.setOnClickListener {
+            val intent = Intent(this, display_expense::class.java)
+            startActivity(intent)
+        }
+
+
+
         val titleEditText: EditText = findViewById(R.id.titleEditText)
         val amountEditText: EditText = findViewById(R.id.amountEditText)
         val categorySpinner: Spinner = findViewById(R.id.categorySpinner)

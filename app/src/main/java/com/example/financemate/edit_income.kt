@@ -43,6 +43,12 @@ class edit_income : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val viewin: ImageView = findViewById(R.id.imageView4)
+        viewin.setOnClickListener {
+            val intent = Intent(this, display_income::class.java)
+            startActivity(intent)
+        }
+
         val titleEditText: EditText = findViewById(R.id.titleEditText)
         val amountEditText: EditText = findViewById(R.id.amountEditText)
         val dateEditText: EditText = findViewById(R.id.dateEditText)
