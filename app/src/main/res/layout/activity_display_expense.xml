@@ -11,26 +11,13 @@
     <!-- Navigation button to add new expense -->
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="47dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="85dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
-        app:srcCompat="@drawable/refresh" />
-
-    <ImageView
         android:id="@+id/imageView6"
         android:layout_width="163dp"
         android:layout_height="51dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView12"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="-350dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         app:srcCompat="@drawable/restore" />
 
     <ScrollView
@@ -50,11 +37,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
             android:orientation="vertical"
             android:padding="16dp" />
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/linearLayout8"
         android:layout_width="345dp"
         android:layout_height="73dp"
         android:layout_marginEnd="50dp"

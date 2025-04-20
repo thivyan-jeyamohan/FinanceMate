@@ -121,7 +121,7 @@ class display_income : AppCompatActivity() {
         cardView.radius = 25f
         cardView.setCardBackgroundColor(Color.parseColor("#dfeeff"))  // Custom background color
         cardView.setCardElevation(8f)
-        cardView.setContentPadding(30, 16, 30, 16)
+        cardView.setContentPadding(30, 16, 30, 70)
 
         // Create a horizontal LinearLayout to divide the CardView into two columns
         val horizontalLayout = LinearLayout(this)

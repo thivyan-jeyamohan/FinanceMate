@@ -13,6 +13,7 @@ import java.io.InputStreamReader
 import java.io.FileOutputStream
 import android.util.Log
 import android.graphics.Color
+import androidx.core.view.marginBottom
 import java.io.File
 
 class display_expense : AppCompatActivity() {
@@ -120,12 +121,14 @@ class display_expense : AppCompatActivity() {
         val cardView = CardView(this)
         cardView.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
+            LinearLayout.LayoutParams.WRAP_CONTENT,
         )
+
         cardView.radius = 25f
         cardView.setCardBackgroundColor(Color.parseColor("#dfeeff"))  // Custom background color
         cardView.setCardElevation(8f)
-        cardView.setContentPadding(30, 16, 30, 16)
+        cardView.setContentPadding(30, 16, 30, 70)
+
 
         // Create a horizontal LinearLayout to divide the CardView into two columns
         val horizontalLayout = LinearLayout(this)

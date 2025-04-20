@@ -26,7 +26,36 @@ class Dashboard : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
 
-
+        val dh: ImageView = findViewById(R.id.dhouse)
+        dh.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+        val df: ImageView = findViewById(R.id.dfood)
+        df.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+        val dhe: ImageView = findViewById(R.id.dhealth)
+        dhe.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+        val dedu: ImageView = findViewById(R.id.dedu)
+        dedu.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+        val denter: ImageView = findViewById(R.id.denter)
+        denter.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
+        val dother: ImageView = findViewById(R.id.dother)
+        dother.setOnClickListener {
+            val intent = Intent(this, expense_overview::class.java)
+            startActivity(intent)
+        }
 
 
         val home: ImageView = findViewById(R.id.imageView8)

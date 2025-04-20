@@ -51,22 +51,22 @@ class expense_overview : AppCompatActivity() {
                 startActivity(intent)
             }
             val b2: Button = findViewById(R.id.buttonfoodvalue)
-            b1.setOnClickListener {
+            b2.setOnClickListener {
                 val intent = Intent(this, profile::class.java)
                 startActivity(intent)
             }
             val b3: Button = findViewById(R.id.buttoneduvalue)
-            b1.setOnClickListener {
+            b3.setOnClickListener {
                 val intent = Intent(this, profile::class.java)
                 startActivity(intent)
             }
             val b4: Button = findViewById(R.id.buttonhealthvalue)
-            b1.setOnClickListener {
+            b4.setOnClickListener {
                 val intent = Intent(this, profile::class.java)
                 startActivity(intent)
             }
             val b5: Button = findViewById(R.id.buttonentertainvalue)
-            b1.setOnClickListener {
+            b5.setOnClickListener {
                 val intent = Intent(this, profile::class.java)
                 startActivity(intent)
             }

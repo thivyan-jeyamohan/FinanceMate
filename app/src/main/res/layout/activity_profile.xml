@@ -13,8 +13,10 @@
         android:layout_width="241dp"
         android:layout_height="48dp"
         android:layout_marginStart="121dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="121dp"
+        android:layout_marginBottom="-330dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSave"
@@ -140,7 +142,7 @@
             android:layout_marginTop="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/agef" />
+            app:srcCompat="@drawable/curref" />
 
         <TextView
             android:id="@+id/textViewEmail"
@@ -213,6 +215,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout16"
         android:layout_width="345dp"
         android:layout_height="73dp"
         android:layout_marginEnd="45dp"

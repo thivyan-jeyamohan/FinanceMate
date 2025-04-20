@@ -15,9 +15,9 @@
         android:layout_width="163dp"
         android:layout_height="51dp"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-345dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
         app:srcCompat="@drawable/restore" />
 
     <ScrollView
@@ -43,6 +43,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/linearLayout9"
         android:layout_width="345dp"
         android:layout_height="73dp"
         android:layout_marginEnd="50dp"
