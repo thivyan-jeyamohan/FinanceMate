@@ -36,7 +36,6 @@
             android:id="@+id/expenseListContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginBottom="50dp"
             android:orientation="vertical"
             android:padding="16dp" />

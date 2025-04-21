@@ -5,6 +5,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
@@ -16,8 +17,14 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import androidx.core.content.FileProvider
 import java.io.BufferedReader
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.IOException
 import java.io.InputStreamReader
+import java.nio.channels.FileChannel
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -31,6 +38,24 @@ class profile : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         sharedPreferences = getSharedPreferences("UserProfile", Context.MODE_PRIVATE)
+
+
+        // Find the ImageView by ID
+        val imageView33: ImageView = findViewById(R.id.imageView33)
+
+        // Set an OnClickListener to trigger the download when clicked
+        imageView33.setOnClickListener {
+            // Trigger the download when the ImageView is clicked
+            downloadFiles()
+        }
+
+
+        imageView33.setOnLongClickListener {
+            sendFilesViaEmail()
+            true  // Indicate that the long-click was handled
+        }
+
+
 
 
         val home: ImageView = findViewById(R.id.imageView8)
@@ -110,6 +135,107 @@ class profile : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+    private fun sendFilesViaEmail() {
+        try {
+            // Define the paths of the files to be emailed
+            val incomeFile = File(filesDir, "incomes.txt")
+            val expenseFile = File(filesDir, "expenses.txt")
+
+            // Ensure the files exist
+            if (incomeFile.exists() && expenseFile.exists()) {
+                // Get the URIs of the files using FileProvider
+                val incomeUri: Uri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.provider", incomeFile)
+                val expenseUri: Uri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.provider", expenseFile)
+
+                // Create an email intent
+                val emailIntent = Intent(Intent.ACTION_SEND_MULTIPLE)
+                emailIntent.type = "application/octet-stream"
+
+                // Add the email recipient
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("jthivyanp@gmail.com"))
+
+                // Add the email subject
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Backup Files")
+
+                // Add the email body text
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Please find the backup files attached.")
+
+                // Add both files as attachments
+                val uris = ArrayList<Uri>()
+                uris.add(incomeUri)
+                uris.add(expenseUri)
+
+                emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)
+                emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+                // Start the activity to send the email
+                startActivity(Intent.createChooser(emailIntent, "Send email"))
+            } else {
+                Toast.makeText(this, "Files do not exist.", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Failed to send the files via email.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+
+
+
+
+    private fun downloadFiles() {
+        try {
+            // Define the paths of the files to be downloaded
+            val incomeFile = File(filesDir, "incomes.txt")
+            val expenseFile = File(filesDir, "expenses.txt")
+
+            // Print the file paths in the console (Logcat)
+            Log.d("DownloadFiles", "Income file path: ${incomeFile.absolutePath}")
+            Log.d("DownloadFiles", "Expense file path: ${expenseFile.absolutePath}")
+
+            // Check if the files exist
+            if (incomeFile.exists() && expenseFile.exists()) {
+                // Log if the files exist
+                Log.d("DownloadFiles", "Both files exist, proceeding with download.")
+
+                // Get the URIs of the files using FileProvider
+                val incomeUri: Uri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.provider", incomeFile)
+                val expenseUri: Uri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.provider", expenseFile)
+
+                // Create an Intent to trigger the download of both files
+                val intent = Intent(Intent.ACTION_SEND_MULTIPLE)
+                intent.type = "application/octet-stream"
+
+                // Add both files to the intent
+                val uris = ArrayList<Uri>()
+                uris.add(incomeUri)
+                uris.add(expenseUri)
+
+                intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+                // Start the activity to allow the user to download both files
+                startActivity(Intent.createChooser(intent, "Download Backup Files"))
+            } else {
+                // Log that the files do not exist
+                Log.d("DownloadFiles", "One or both files do not exist.")
+                Toast.makeText(this, "Files do not exist.", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Failed to share the files.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+
+
 
     // Function to validate the form
     private fun validateForm(name: String, age: String, email: String): Boolean {
